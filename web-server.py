@@ -52,5 +52,5 @@ class WebServer:
             self.handle_request(conn)
 
 if __name__ == "__main__":
-    server = WebServer("192.168.254.108", 80)
+    server = WebServer("192.168.254.108", 8080)
     server.start()
