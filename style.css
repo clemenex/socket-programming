@@ -1,156 +1,157 @@
 :root {
-    --primary: #6610f2;
-    --secondary: #e83e8c;
-    --danger: #dc3545;
-    --dark: #343a40;
-    --light: #f8f9fa;
-  }
-  
-  body {
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    color: #212529;
-    line-height: 1.5;
-  }
-  
-  /* Hero Section */
+  --primary: #ab2f1d;
+  --secondary: #f15a3d;
+  --danger: #dc3545;
+  --dark: #343a40;
+  --light: #f8f9fa;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #212529;
+  line-height: 1.5;
+}
+
+/* Hero Section */
+.hero {
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  padding: 0.5rem;
+  max-height: 450px;
+  object-fit: cover;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(var(--primary) 2px, transparent 2px);
+  background-size: 20px 20px;
+  opacity: 0.3;
+  z-index: -1;
+  transform: translateX(10%) translateY(-10%);
+}
+
+.hero-image::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(var(--secondary) 2px, transparent 2px);
+  background-size: 20px 20px;
+  opacity: 0.3;
+  z-index: -1;
+  transform: translateX(-10%) translateY(10%);
+}
+
+.badges .badge {
+  font-size: 0.7rem;
+  padding: 0.35em 0.65em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Section Styles */
+.section-title {
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* CTA Section */
+.cta {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  padding: 5rem 0;
+}
+
+/* Skills */
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  background-color: var(--primary) !important;
+}
+
+.skill-item {
+  background-color: #f8f9fa;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Project Image Placeholder */
+.project-image {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #adb5bd;
+}
+
+/* Social Icons */
+.social-icon {
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+/* Buttons */
+.btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: #962918;
+  border-color: #962918;
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--dark);
+}
+
+.btn-outline-light:hover {
+  color: var(--primary);
+}
+
+/* Media Queries */
+@media (max-width: 991.98px) {
   .hero {
-    padding: 6rem 0;
-    position: relative;
-    overflow: hidden;
+    padding: 4rem 0;
   }
   
   .hero-image {
-    position: relative;
+    margin-top: 3rem;
   }
-  
-  .hero-image img {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-    padding: 0.5rem;
-    max-height: 450px;
-    object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+  .hero h1 {
+    font-size: 2.5rem;
   }
-  
-  .hero-image::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(var(--primary) 2px, transparent 2px);
-    background-size: 20px 20px;
-    opacity: 0.3;
-    z-index: -1;
-    transform: translateX(10%) translateY(-10%);
-  }
-  
-  .hero-image::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(var(--secondary) 2px, transparent 2px);
-    background-size: 20px 20px;
-    opacity: 0.3;
-    z-index: -1;
-    transform: translateX(-10%) translateY(10%);
-  }
-  
-  .badges .badge {
-    font-size: 0.7rem;
-    padding: 0.35em 0.65em;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  
-  /* Section Styles */
-  .section-title {
-    font-weight: 700;
-    margin-bottom: 2rem;
-  }
-  
-  /* CTA Section */
-  .cta {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-    padding: 5rem 0;
-  }
-  
-  /* Skills */
-  .skill-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-  }
-  
-  .skill-item {
-    background-color: #f8f9fa;
-    padding: 0.75rem 1rem;
-    border-radius: 6px;
-    font-weight: 500;
-  }
-  
-  /* Project Image Placeholder */
-  .project-image {
-    width: 100%;
-    height: 100%;
-    min-height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #adb5bd;
-  }
-  
-  /* Social Icons */
-  .social-icon {
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-  }
-  
-  .social-icon:hover {
-    transform: translateY(-3px);
-  }
-  
-  /* Buttons */
-  .btn {
-    padding: 0.5rem 1.5rem;
-    border-radius: 6px;
-    font-weight: 500;
-  }
-  
-  .btn-primary {
-    background-color: var(--primary);
-    border-color: var(--primary);
-  }
-  
-  .btn-primary:hover {
-    background-color: #5a0cdb;
-    border-color: #5a0cdb;
-  }
-  
-  .btn-outline-dark:hover {
-    background-color: var(--dark);
-  }
-  
-  .btn-outline-light:hover {
-    color: var(--primary);
-  }
-  
-  /* Media Queries */
-  @media (max-width: 991.98px) {
-    .hero {
-      padding: 4rem 0;
-    }
-    
-    .hero-image {
-      margin-top: 3rem;
-    }
-  }
-  
-  @media (max-width: 767.98px) {
-    .hero h1 {
-      font-size: 2.5rem;
-    }
-  }
+}
